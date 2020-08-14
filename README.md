@@ -1,4 +1,6 @@
-# test
+# Todo App - Vue.js
+
+Todo App build from [Traversy Media Vue JS Crash Course](https://youtu.be/Wy9q22isx3U)
 
 ## Project setup
 ```
