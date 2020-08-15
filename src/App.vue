@@ -26,7 +26,9 @@ export default {
   },
   methods: {
     deleteTodo(id) {
-      this.todos = this.todos.filter((todo) => todo.id !== id);
+      axios
+        .delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+        .then((this.todos = this.todos.filter((todo) => todo.id !== id)));
     },
     addTodo(newTodo) {
       const { title, completed } = newTodo;
@@ -36,7 +38,7 @@ export default {
           title,
           completed,
         })
-        .then((res) => (this.todos = [...this.todos, res.d]))
+        .then((res) => (this.todos = [...this.todos, res.data]))
         .catch((err) => console.log(err));
     },
   },
